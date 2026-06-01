@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <script>
+    // Jika ada oobCode di URL, redirect ke halaman custom
+    const params = new URLSearchParams(window.location.search);
+    const mode   = params.get('mode');
+    const code   = params.get('oobCode');
+
+    if (mode === 'resetPassword' && code) {
+      window.location.href =
+        '/reset-password.html' + window.location.search;
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>
